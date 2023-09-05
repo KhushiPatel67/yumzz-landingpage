@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="styles/site.css" type="text/css" rel="stylesheet" />
+</head> 
+<link href="homepage.component.css" type="text/css" rel="stylesheet" />
+<script>src="homepage.component.ts"</script>
+
+<section class="hero is-fullheight" style="background: #F3F1EE;">
+<div class="hero-head">
+  <nav class="navbar is-transparent px-6" role="navigation" aria-label="main navigation">
+    <div class="navbar-selection">
+      <a href="homepage.component.html" class="navbar-item" routerLink="/home" routerLinkActive="active">
+        <button class="title"> <b>Yumzz</b></button>
+      </a>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+<div class="hero-body">
+
+
+      <div class="column is-6" style="padding: 0;">
+        <h1 class="pl-6" style="font-size: 3.6rem;">
+          <br>Dining. <br>Enhanced.
+        </h1>
+        <h2 class="pl-6" style="font-size: 2rem;">
+          Augmenting the reality of dining in and out across the Bay Area.
+        </h2>
+      </div>
+ 
+      <div class="column is-7">
+        <figure class="image px-6 py-6">
+          <img class="big" style="height:550px; width: 740px; margin-left: 280px" src="imgandvid/pic1.png"/>
+        </figure>
+      </div>
+
+</div>
+
+</section>
+<section class="hero is-success is-fullheight" style="background: #FF8859;">
+<div class="hero-body">
+
+   
+      <div class="column is-5">
+        
+        <h1 class="is-4 has-text-black" style="font-size: 2.5rem;">
+          Enhancing connections <br>to local restaurants
+        </h1>
+        <p class="has-text-black">
+          Yumzz uses revolutionary AR (augmented reality) technology to <br>
+elevate dining experiences. Through anyone’s phone, you can see <br>
+the aesthetically pleasing food of our partnered restaurants on your <br>
+table before ordering it!
+        </p>
+
+        <div id="switch-btns">
+          <button onClick="changevid('../../assets/images/screens/vid1.mov')" class="tab active" id="btn-take">
+          <h1 class="is-4 has-text-black" style="text-align:left; font-size: 2.5rem;"> Increases Average <br>Check Size  </h1>
+          <p class="has-text-black"> Our service raises the average <br> check size by 60%
+          </p>
+        </button>
+        <br>
+        <button onClick="changevid('../../assets/images/screens/vid2.mp4')" class="tab" id="btn-ask" >
+          <h1 class="is-4 has-text-black" style="text-align:left; font-size: 2.5rem;"> Increases Wait Staff 
+            Productivity</h1>
+          <p class="has-text-black"> Reduces wait staff work by 30%</p>
+        </button>
+
+        <button onClick="changevid('../../assets/images/screens/vid3.mov')" class="tab" id="btn-trade">
+          <h1 class="is-4 has-text-black" style="text-align:left; font-size: 2.5rem;"> Increases Customer
+            Retention
+          </h1>
+          <p class="has-text-black"> By providing these experiences, we increase customer retention <br> by 40%</p>
+        </button>
+      </div>
+      </div>
+
+
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <iframe src="https://player.vimeo.com/video/725572952?h=2df88de864" width="750px" height="790px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="mySlides fade">
+    <iframe src="https://player.vimeo.com/video/725572797?h=5b9adbf89c" width="750px" height="790px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="mySlides fade">
+    <iframe src="https://player.vimeo.com/video/725572101?h=a52b466a4c" width="750px" height="790px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+    <script language="javascript" type="text/javascript"> 
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+              
+    </script>
+
+
+
+</section>
+
+<section class="hero is-success is-fullheight" style="background: #F3F1EE;">
+<div class="hero-body">
+   
+      <div class="column is-5" style="margin-right: -30px">
+        <h1 class="title has-text-black" style="font-size: 2.5rem;">
+          Want to see this <br>in 
+          your favorite restaurant <br>
+          or a restaurant you own? </br>
+        </h1>
+        <p class="subtitle has-text-black">
+          Restaurant Owners: Email us with your location, menu, and a time to <br>meet either through zoom or in person. Improve your restaurant's <br>REVPASH and customer retention rate with our service!<br><br>
+          Food Enthusiasts: Email us about your favorite restaurant <br>and let them know about our service. Help us elevate the<br> dining experience in your area! 
+        </p>
+      </div>
+      <div class="column is-6">
+        <figure class="image">
+          <div class="box" style="padding: 0rem; max-width: 400px; margin: auto; border-radius: 8px;">
+            <img src="imgandvid/pic2.png" style=" width:500px; margin-left: 200px;" />
+          </div>
+        </figure>
+      </div>
+
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+  <div class="columns is-multiline is-vcentered">
+    <div class="column is-half is-offset-one-quarter">
+      <div class="content has-text-centered is-centered pb-6">
+        <p>
+          <strong>
+            To sign up for early access or if you have any questions, please contact us at yumzzapp@gmail.com!
+          </strong>
+        </p>
+      </div>
+    </div>
+    <div class="column is-12">
+      <div class="content has-text-centered">
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+</html>

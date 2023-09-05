@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "public",
+    "headers": [
+          {
+            "source": "/apple-app-site-association",
+            "headers": [{"key": "Content-Type", "value": "application/json"}]
+          }
+        ],
+    "appAssociation": "AUTO",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "dynamicLinks": true,
+        "destination": "/index.html"
+      },
+      { "source": "/apple-app-site-association", "dynamicLinks": true }
+    ]
+  }
+}
